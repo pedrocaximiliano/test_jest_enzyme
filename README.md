@@ -1,4 +1,4 @@
-# The simple training project using Jest unit with enzyme
+### simple training project using Jest unit with enzyme
 
 # Start
 -git clone https://github.com/pedrocaximiliano/test_jest_enzyme.git
