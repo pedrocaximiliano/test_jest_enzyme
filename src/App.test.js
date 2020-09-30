@@ -1,7 +1,8 @@
 import React from "react";
 import Enzyme, { shallow } from "enzyme";
 import EnzymeAdapter from "enzyme-adapter-react-16";
-import App from "./App";
+import { App } from "./App";
+// import App from "./App";
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
@@ -41,6 +42,12 @@ test("counter starts at 0", () => {
   const wrapper = setup();
   const count = findByTestAttr(wrapper, "count").text();
   expect(count).toBe("0"); // do this first with an integer and show failure!
+});
+
+test("should show h1 component", () => {
+  const wrapper = setup();
+  const count = findByTestAttr(wrapper, "getModule1").text();
+  expect(count).toBe("chamar modulo1"); // do this first with an integer and show failure!
 });
 
 describe("Increment", () => {
@@ -134,5 +141,17 @@ describe("error when counter goes below 0", () => {
       const errorHasHiddenClass = errorDiv.hasClass("hidden");
       expect(errorHasHiddenClass).toBe(true);
     });
+  });
+
+  test("get func modulo1", () => {
+    const wrapper = setup();
+    const number = 11;
+
+    // find button and click
+    const button = findByTestAttr(wrapper, "modulo1-button");
+    button.simulate("click");
+
+    // execute fucntion
+    expect(Modulo1(number)).toBe(11);
   });
 });
