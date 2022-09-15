@@ -19,15 +19,12 @@ export function App() {
         The counter is currently&nbsp;
         <span data-test="count">{count}</span>
       </h1>
-      {/* Notes:
-      - using ternary on the error state to determine whether or not to hide
-      - the 'error' and 'hidden' classes are defined in App.css
-      */}{" "}
+      feature
       <div
         data-test="error-message"
         className={`error ${error ? "" : "hidden"}`}
       >
-        The counter cannot go below 0
+        feature{" "}
       </div>
       <button
         data-test="increment-button"
