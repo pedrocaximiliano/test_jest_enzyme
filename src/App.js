@@ -19,10 +19,7 @@ export function App() {
         The counter is currently&nbsp;
         <span data-test="count">{count}</span>
       </h1>
-      {/* Notes:
-      - using ternary on the error state to determine whether or not to hide
-      - the 'error' and 'hidden' classes are defined in App.css
-      */}
+      feature1qclea
       <div
         data-test="error-message"
         className={`error ${error ? "" : "hidden"}`}
