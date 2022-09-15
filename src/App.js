@@ -22,7 +22,7 @@ export function App() {
       {/* Notes:
       - using ternary on the error state to determine whether or not to hide
       - the 'error' and 'hidden' classes are defined in App.css
-      */}
+      */}{" "}
       <div
         data-test="error-message"
         className={`error ${error ? "" : "hidden"}`}
